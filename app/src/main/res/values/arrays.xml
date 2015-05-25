@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="neon_colors">
+        <item>@color/arc_1</item>
+        <item>@color/arc_2</item>
+        <item>@color/arc_3</item>
+        <item>@color/arc_4</item>
+        <item>@color/arc_5</item>
+        <item>@color/arc_6</item>
+        <item>@color/arc_7</item>
+        <item>@color/arc_8</item>
+    </array>
+</resources>

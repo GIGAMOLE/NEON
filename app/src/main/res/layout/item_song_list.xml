@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/song_item_selector">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/song_item_progress_bar"
+        android:progressDrawable="@drawable/song_item_progress_bar"
+        android:visibility="invisible"
+        android:max="100" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_item_img_headphone"
+            android:adjustViewBounds="true"
+            android:src="@drawable/headphone"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/song_item_title"
+            android:tint="@color/main"
+            android:scaleType="center"
+            android:visibility="gone"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Video Games"
+            android:id="@+id/song_item_title"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/song_item_img_headphone"
+            android:layout_toLeftOf="@+id/song_item_duration" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:00"
+            android:id="@+id/song_item_duration"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</FrameLayout>

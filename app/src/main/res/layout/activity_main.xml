@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slide="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2">
+
+            <com.gigamole.neon.views.StaticViewPager
+                android:id="@+id/player_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/player_tint_progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/player_song_progress_bar"
+                android:layout_alignParentEnd="false"
+                android:background="@color/main_50_alpha" />
+
+            <SeekBar
+                android:id="@+id/player_song_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:progressDrawable="@android:color/transparent"
+                android:thumb="@null" />
+
+            <RelativeLayout
+                android:id="@+id/view_stub"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/player_song_progress_bar"
+                android:clickable="true"
+                android:paddingBottom="40dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/player_song_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/player_btn_play"
+                    android:layout_toStartOf="@+id/player_btn_play"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/player_song_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/player_song_title"
+                    android:layout_alignLeft="@+id/player_song_title"
+                    android:layout_alignStart="@+id/player_song_title"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_toLeftOf="@+id/player_btn_play"
+                    android:layout_toStartOf="@+id/player_btn_play"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/player_btn_play"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/player_song_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_main"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/player_song_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/player_tint_progress_bar"
+                android:layout_alignRight="@+id/player_tint_progress_bar"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="2:40"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/player_song_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:max="100"
+                android:progressDrawable="@drawable/player_seek_bar" />
+
+        </RelativeLayout>
+
+        <com.daimajia.swipe.SwipeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            slide:clickToClose="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <CheckBox
+                        android:id="@+id/rb_loop"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_main"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="LOOP"
+                        android:textColor="@color/white" />
+
+                    <CheckBox
+                        android:id="@+id/rb_random"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_main"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="RANDOM"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rb_main"
+                            android:button="@null"
+                            android:checked="true" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@drawable/cover" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rb_main"
+                            android:button="@null" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@drawable/bar" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_gd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rb_main"
+                            android:button="@null" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@drawable/gd" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_sea"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rb_main"
+                            android:button="@null" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/sea" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_pulse"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rb_main"
+                            android:button="@null" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/pulse" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.gigamole.neon.views.VerticalSeekBar
+                            android:id="@+id/vsb_1"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_vsb_1"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/player_vertical_seek_bar"
+                            android:thumb="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_vsb_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.gigamole.neon.views.VerticalSeekBar
+                            android:id="@+id/vsb_2"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_vsb_2"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/player_vertical_seek_bar"
+                            android:thumb="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_vsb_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.gigamole.neon.views.VerticalSeekBar
+                            android:id="@+id/vsb_3"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_vsb_3"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/player_vertical_seek_bar"
+                            android:thumb="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_vsb_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.gigamole.neon.views.VerticalSeekBar
+                            android:id="@+id/vsb_4"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_vsb_4"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/player_vertical_seek_bar"
+                            android:thumb="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_vsb_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <com.gigamole.neon.views.VerticalSeekBar
+                            android:id="@+id/vsb_5"
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_vsb_5"
+                            android:layout_centerHorizontal="true"
+                            android:progressDrawable="@drawable/player_vertical_seek_bar"
+                            android:thumb="@null" />
+
+                        <TextView
+                            android:id="@+id/txt_vsb_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/player_song_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </com.daimajia.swipe.SwipeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:id="@+id/splash_view"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.gigamole.millspinners.lib.MultiArcSpinner
+                android:id="@+id/multi_arc_spinner"
+                android:layout_width="180dp"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="NEON"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_loaded_songs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="..."
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="Created by GIGAMOLE"
+            android:textSize="10sp" />
+
+    </FrameLayout>
+
+</FrameLayout>

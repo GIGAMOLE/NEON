@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#8af9ff</color>
+    <color name="main_80_alpha">#c88af9ff</color>
+    <color name="main_50_alpha">#808af9ff</color>
+    <color name="main_30_alpha">#508af9ff</color>
+
+    <color name="bg">#191a1c</color>
+
+    <color name="list_progress_bg">#1f2427</color>
+    <color name="list_progress">#39565a</color>
+    <color name="list_progress_80_alpha">#c839565a</color>
+
+    <color name="white">#fff</color>
+
+    <color name="arc_1">#8AF9FF</color>
+    <color name="arc_2">#97FAFF</color>
+    <color name="arc_3">#A4FAFF</color>
+    <color name="arc_4">#B1FBFF</color>
+    <color name="arc_5">#BEFCFF</color>
+    <color name="arc_6">#CBFCFF</color>
+    <color name="arc_7">#D8FDFF</color>
+    <color name="arc_8">#E5FEFF</color>
+</resources>
