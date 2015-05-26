@@ -18,7 +18,7 @@ U can check the app [here](https://github.com/GIGAMOLE/NEON/tree/master/app).
 
 Or download it from GooglePlay: 
 
-[![neon](https://lh6.googleusercontent.com/-WbVmppsrqNo/VWOpBtJGUJI/AAAAAAAAAeA/avPJRKnO6VY/w172-h60-no/gp_ic.png)](http://google.com.au/)
+[![neon](https://lh6.googleusercontent.com/-WbVmppsrqNo/VWOpBtJGUJI/AAAAAAAAAeA/avPJRKnO6VY/w172-h60-no/gp_ic.png)](https://play.google.com/store/apps/details?id=com.gigamole.neon)
 
 Download
 ------------
