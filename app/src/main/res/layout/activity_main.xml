@@ -39,7 +39,7 @@ limitations under the License.
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_above="@+id/player_song_progress_bar"
-                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
                 android:background="@color/main_50_alpha" />
 
             <SeekBar
