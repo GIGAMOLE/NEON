@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'neon'
-            keyPassword 'neonneon'
-            storeFile file('C:/Users/GIGAMOLE/.android/neon.jks')
-            storePassword 'neonneon'
-        }
-    }
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
     defaultConfig {
@@ -20,7 +12,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.config
         }
     }
 }
