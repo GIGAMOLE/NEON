@@ -28,9 +28,9 @@ Download it from GooglePlay:
 Application
 -----------
 
-U can check the application [here](https://github.com/DevLight-Mobile-Agency/NEON/tree/master/app).
+You can check the application [here](https://github.com/DevLight-Mobile-Agency/NEON/tree/master/app).
 
-Also You can download a source code from GitHub's [releases page](https://github.com/DevLight-Mobile-Agency/NEON/releases).
+Also you can download a source code from GitHub's [releases page](https://github.com/DevLight-Mobile-Agency/NEON/releases).
 
 Or check it with `VCS`:
 
@@ -47,11 +47,6 @@ Loading
 |   	|   	|   	|   	|   	|   	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|:-:	|
 ![](https://lh5.googleusercontent.com/-81Jj6iod734/VWOtd9WJKcI/AAAAAAAAAf8/ecTIdFaGSZg/w320-h451-no/device-2015-05-26-021556.png)|![](https://lh4.googleusercontent.com/-NnWj8T6JAPk/VWOtcgUsQ7I/AAAAAAAAAgM/Mo01DVcQYks/w320-h450-no/device-2015-05-26-021052.png)|![](https://lh5.googleusercontent.com/-2oAKKcpUUJg/VWOtcVYqKlI/AAAAAAAAAfY/OIr3mxp5Obs/w320-h455-no/device-2015-05-26-021132.png)|![](https://lh6.googleusercontent.com/-jhPV6LgQuNo/VWOtcojlayI/AAAAAAAAAfg/yp7EDvw1G60/w320-h456-no/device-2015-05-26-021222.png)|![](https://lh6.googleusercontent.com/-Y1FkYU_20KE/VWOtdCai5-I/AAAAAAAAAgE/BWob1rj8k40/w320-h449-no/device-2015-05-26-021315.png)|![](https://lh5.googleusercontent.com/-y8uDU1tYKNM/VWOtdm6I30I/AAAAAAAAAf0/OndGeFKpP8w/w320-h455-no/device-2015-05-26-021446.png)
-
-Getting Help
-======
-
-To report a specific problem or feature request, [open a new issue on Github](https://github.com/DevLight-Mobile-Agency/NEON/issues/new).
 
 License
 ======
