@@ -41,8 +41,8 @@ Android SDK Version
 =========
 `NEON` requires a minimum SDK version of 11.
 
-Loading
-========
+Screenshots
+===========
 
 |   	|   	|   	|   	|   	|   	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|:-:	|
