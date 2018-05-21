@@ -10,6 +10,17 @@ The sample open-source player which include music visualizations and equalizer.
 
 ![](https://lh3.googleusercontent.com/-HSmR77eG8oo/VWOnjDwg_xI/AAAAAAAAAds/1Y2C_LhWiqg/w600-h300-no/Untitled-2.jpg)
 
+
+Warn
+====
+```
+This library is not more supported. 
+If you want to add new feature or fix a bug, grab source code and do it. 
+If you think your fix or feature would be useful to other developers, 
+I can add link of your repository to this README file. 
+Thank you for using our libraries.
+```
+
 The application contains following visualizations:
 
  - [**SlideAlbumCover**](#cover).
